@@ -32,36 +32,36 @@ export class Pilha{
     }
 
 }
-class ExtructList{
-    constructor(value){ this.extructList = [] }
+class structList{
+    constructor(value){ this.structList = [] }
         addList(value){
-            this.extructList.push(value);
-             return this.extructList;
+            this.structList.push(value);
+             return this.structList;
         }
         removeFila(){
             let temp = []
-            for(let i=0;i<this.extructList.length;i++){
+            for(let i=0;i<this.structList.length;i++){
                 if(i != 0){
-                    temp.push(this.extructList[i]);
+                    temp.push(this.structList[i]);
                 }
             }
-            this.extructList = temp;
+            this.structList = temp;
 
-           return this.extructList
+           return this.structList
         }
         removePilha(){
         let temp = [];
-        let size = this.extructList.length -1;
+        let size = this.structList.length -1;
         for(let i = 0; i < size; i++){
-            temp[i]=(this.extructList[i]);  
+            temp[i]=(this.structList[i]);  
             }
-            this.extructList = temp;
+            this.structList = temp;
             return this.extructList
         }
 }
 
-function createLista(sizeList){
-    const list = new ExtructList();
+function createList(sizeList){
+    const list = new structList();
     for(let i= 0 ; i < sizeList; i++){
     list.addList(i);
     }
@@ -71,16 +71,16 @@ function createLista(sizeList){
 console.log("*** Exercício de Filas e Pilhas ***")
 
 console.log("*** Cria uma extrutura de Lista ***")
-let extruct = createLista(20);
-console.log(extruct.extructList);
+let extruct = createList(20);
+console.log(extruct.structList);
 
 console.log("*** Adiciona um elemento***")
-console.log(extruct.addList(56));
+console.log(struct.addList(56));
 
 console.log("*** Remove Fila - First In First Out - FIFO ***")
-console.log(extruct.removeFila())
+console.log(struct.removeFila())
 
 console.log("*** Remove Pilha - Last In First Out - LIFO ***")
-console.log(extruct.removePilha());
+console.log(struct.removePilha());
 
 
